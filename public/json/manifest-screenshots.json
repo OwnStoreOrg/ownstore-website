@@ -1,0 +1,14 @@
+{
+  "screenshots": [
+    {
+      "src": "/images/screenshots/screenshot-1.png",
+      "type": "image/png",
+      "sizes": "750x1364"
+    },
+    {
+      "src": "/images/screenshots/screenshot-1.png",
+      "type": "image/png",
+      "sizes": "750x1364"
+    }
+  ]
+}

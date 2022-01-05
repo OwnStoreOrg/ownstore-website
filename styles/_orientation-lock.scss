@@ -1,0 +1,25 @@
+.orientation-lock {
+  @apply hidden;
+}
+
+@include landscapeMode {
+  #pageMain-lock {
+    @apply hidden;
+  }
+
+  .orientation-lock {
+    @apply fixed h-full w-full top-0 left-0 z-50 pointer-events-none flex justify-center items-center bg-primary;
+
+    & .content {
+      @apply flex flex-col justify-center items-center w-4/5 h-3/4;
+    }
+
+    & .text {
+      @apply text-white mt-4 text-center;
+
+      &-1 {
+        @apply text-xl font-bold font-primary-medium mb-2;
+      }
+    }
+  }
+}

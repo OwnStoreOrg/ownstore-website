@@ -1,0 +1,43 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+    <defs>
+        <linearGradient id="prefix__a" x1="7.121%" x2="87.212%" y1="42.219%" y2="56.749%">
+            <stop offset="0%" stop-color="#C285FF"/>
+            <stop offset="100%" stop-color="#6972D1"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="4.636%" x2="100.236%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#C36BFF"/>
+            <stop offset="100%" stop-color="#5449B7"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="50.014%" x2="50.014%" y1="3.224%" y2="101.164%">
+            <stop offset="0%" stop-color="#F24D55"/>
+            <stop offset="100%" stop-color="#CE2E35"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="7.121%" x2="87.212%" y1="48.161%" y2="51.595%">
+            <stop offset="0%" stop-color="#C285FF"/>
+            <stop offset="100%" stop-color="#6972D1"/>
+        </linearGradient>
+        <linearGradient id="prefix__e" x1="50.014%" x2="50.014%" y1="3.224%" y2="101.164%">
+            <stop offset="0%" stop-color="#F24D55"/>
+            <stop offset="100%" stop-color="#CE2E35"/>
+        </linearGradient>
+        <linearGradient id="prefix__f" x1="50.014%" x2="50.014%" y1="3.224%" y2="101.164%">
+            <stop offset="0%" stop-color="#F24D55"/>
+            <stop offset="100%" stop-color="#CE2E35"/>
+        </linearGradient>
+        <linearGradient id="prefix__g" x1="50.014%" x2="50.014%" y1="3.224%" y2="101.164%">
+            <stop offset="0%" stop-color="#F24D55"/>
+            <stop offset="100%" stop-color="#CE2E35"/>
+        </linearGradient>
+    </defs>
+    <g fill="none">
+        <path fill="url(#prefix__a)" d="M0.669 6.733H9.624V11.658H0.669z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__b)" d="M0.669 6.733H9.624V7.93H0.669z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__c)" d="M4.11 6.734H6.184V11.658999999999999H4.11z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__d)" d="M0 3.982H10.293V6.734H0z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__e)" d="M3.604 3.982H6.688000000000001V6.734H3.604z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__f)" d="M5.469 3.981H3.427c-1.125-.003-2.034-.895-2.033-1.994C1.396.89 2.31 0 3.434 0c1.124 0 2.035.892 2.035 1.99v1.991zM3.427.729c-.7.02-1.255.58-1.255 1.265 0 .683.555 1.243 1.255 1.264h1.296V1.99C4.72 1.293 4.14.73 3.427.73z" transform="translate(1.842 1.8)"/>
+        <path fill="url(#prefix__g)" d="M7.13 3.981H5.468V2.355c0-.658.405-1.252 1.027-1.505.622-.252 1.339-.113 1.815.352.477.466.62 1.166.362 1.774-.258.608-.865 1.005-1.539 1.005H7.13zm-.923-.729h.922c.51 0 .922-.403.922-.9 0-.498-.413-.902-.922-.902-.51 0-.922.404-.922.901v.901z" transform="translate(1.842 1.8)"/>
+        <path fill="#C63D43" d="M4.11 6.734H6.184V7.933H4.11z" transform="translate(1.842 1.8)"/>
+    </g>
+</svg>

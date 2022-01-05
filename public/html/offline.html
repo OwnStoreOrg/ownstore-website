@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEX6+vv4+Pnx8fPx8fL5+fru7u/s7e7k5OXt7e729vfc3N3W1tjm5ujb29zZ2tvS0tPX2Nni4uPs7O7d3d7z9PX09PXz8/T7+/z///8j1F0wAAAAAWJLR0QYm2mFHgAAAAd0SU1FB+UIGgsaOBHzcQ8AAAA4SURBVBjTY2CgHWBkYmZE5rOwsrFzIAtwcnHz8HIi6+DjFxBkQVYixCWMooVFRFRMFM0ecSq6GQCdGAFPulkAAAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wOC0yNlQxMToyNjo0OSswMDowMJGBXMgAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDgtMjZUMTE6MjY6NDkrMDA6MDDg3OR0AAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjI5OTc3MjA5pxLkZgAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIxLTA4LTI2LzVlMGYyOWRjNGZjYjIyZDk2MzliOWE4ODY0YzIxNzhjLmljby5wbme+SbXcAAAAAElFTkSuQmCC" />
+    <link rel="manifest" href="/json/manifest.json"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <style>
+        body {
+            font-family: "Roboto", sans-serif !important;
+            margin: 0;
+        }
+
+        .ys-ofln {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: #FFFFFF;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ys-ofln-ttl {
+            font-size: 24px;;
+            font-weight: 600;
+            color: #1e1e1e;
+            line-height: 30px;
+            padding: 10px 0;
+        }
+
+        .ys-ofln-txt {
+            font-size: 16px;
+            font-weight: 400;
+            color: #51505D;
+            line-height: 20px;
+            padding: 10px 40px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        button {
+            outline: none;;
+            border: 0;
+            padding: 12px 20px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 400;
+            background-color: #ce2e35;
+            width: 200px;
+            margin: 20px 0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(206, 46, 53, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+<div class="ys-ofln">
+
+    <div>
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxNDcgMTMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8dGl0bGU+R3JvdXAgMjwvdGl0bGU+CjxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgo8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTA3IC0xNTgpIj4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA3IDE1OSkiPgo8cGF0aCBkPSJtOTIuOTM4IDIxLjIzNC00Ljc5ODIgNjEuMTE1Yy0wLjYwNTM3IDcuNzA3OS02Ljk3OTEgMTMuNjUxLTE0LjY0IDEzLjY1MS03LjY2MDYgMC0xNC4wMzUtNS45NDMyLTE0LjY0LTEzLjY1MWwtNC43OTgyLTYxLjExNWMtMC44OTg2OS0xMS40NDYgOC4wNjE3LTIxLjIzNCAxOS40MzgtMjEuMjM0IDExLjM3NiAwIDIwLjMzNiA5Ljc4ODQgMTkuNDM4IDIxLjIzNHoiIGZpbGw9IiNEM0NFQ0MiIHN0cm9rZT0iIzVDNEQzMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Im02Ni45OTIgMjcuMzA0YzAuMTA4MTMgMS4zNzY0LTAuOTE5NzIgMi41Nzk3LTIuMjk2MSAyLjY4ODMtMS4zNzY0IDAuMTA4MTMtMi41OC0wLjkxOTktMi42ODgzLTIuMjk2My0wLjEwODEzLTEuMzc2NCAwLjkxOTcyLTIuNTc5NyAyLjI5NjEtMi42ODgxIDEuMzc2NC0wLjEwODMzIDIuNTggMC45MTk3MSAyLjY4ODMgMi4yOTYxIiBmaWxsPSIjMjkzNTRDIi8+CjxwYXRoIGQ9Im04Mi45OTIgMjcuMzA0YzAuMTA4NTIgMS4zNzY0LTAuOTE5NzQgMi41Nzk3LTIuMjk2MiAyLjY4ODMtMS4zNzYyIDAuMTA4MTMtMi41Nzk4LTAuOTE5OS0yLjY4ODItMi4yOTYzLTAuMTA4MzMtMS4zNzY0IDAuOTE5NzQtMi41Nzk3IDIuMjk2Mi0yLjY4ODEgMS4zNzY0LTAuMTA4MzMgMi41OCAwLjkxOTcxIDIuNjg4MiAyLjI5NjEiIGZpbGw9IiMyOTM1NEMiLz4KPHBhdGggZD0ibTY5LjIzNyA0MGMtMC4zMDM3NCAwLTAuNjA4MTQtMC4wOTU1NjUtMC44NDYwOS0wLjI4OTItMC40OTY2NC0wLjQwMzI2LTAuNTI0NzQtMS4wNzUzLTAuMDYwMjEyLTEuNTA2MSAwLjA5Mjc3MS0wLjA4NTkzMiAyLjMwNDYtMi4xMDQyIDUuNTIzNC0yLjIwMTEgMi4wMzM4LTAuMDYwMzA2IDMuOTY3MyAwLjYzODEzIDUuNzUyNSAyLjA3ODcgMC40OTk3NiAwLjQwMzA3IDAuNTI2MyAxLjA3OTcgMC4wNTk5ODkgMS41MTExLTAuNDY2MzEgMC40MzE3OC0xLjI1MDIgMC40NTUwOS0xLjc0OTMgMC4wNTE2MzYtMy45OTctMy4yMjQ5LTcuNDA0My0wLjMyMDYxLTcuNzc5MiAwLjAyMDYxNi0wLjI0Mzc1IDAuMjIyMTUtMC41NzIwMSAwLjMzNDI5LTAuOTAxMTcgMC4zMzQyOSIgZmlsbD0iIzI5MzU0QyIvPgo8cGF0aCBkPSJtOTYuMjk5IDE4LTEuMjk4NyAxMy45ODFjMTQuNDgzIDIuMDQyMyAyOC42MjcgNi4xOTgxIDQyLjE4MyAxMi4zOTUgMy4zOTA1IDEuNTUwMSA3LjM5MTcgMC4xMTE3NyA5LjA2OTItMy4yMzczdi0yLjMzOWUtNGMxLjc4ODktMy41NzA5IDAuMjUwMTktNy45MTA1LTMuMzY1OS05LjU2MjEtMTQuOTU0LTYuODMxMS0zMC41NzYtMTEuMzgzLTQ2LjU4OC0xMy41NzciIGZpbGw9IiM1NUJCQkEiLz4KPHBhdGggZD0ibTUwLjcwNCAxOGMtMi4yNjQ4IDAuMzE0MzUtNC41MjkyIDAuNjcwMzUtNi43OTIyIDEuMDcxNi0xOC4xMzYgMy4yMTU2LTMyLjA3NSA4LjQ4NDYtMzkuODE2IDExLjg5MS0zLjcyMTcgMS42MzgyLTUuMjAwOCA2LjA2NTktMy4yMDQgOS41NTc0IDEuNzU5OSAzLjA3NyA1LjYxNjUgNC4zMjIxIDguODk4NiAyLjg4MzcgNy45Njg3LTMuNDkyNCAyMS4zMDgtOC4yMzIgMzcuMTEzLTEwLjk4NCAxLjY5ODItMC4yOTU2OCAzLjM5NzQtMC41NjEwOSA1LjA5Ni0wLjgwMzczbC0xLjI5NjItMTMuNjE3IiBmaWxsPSIjNTVCQkJBIi8+CjxwYXRoIGQ9Im01Mi42OTYgNDUuMDAyLTAuMDAzMDI2LTAuMDAyMjAzYy0xMS40NDkgMS45MjM5LTIwLjU5NSA0Ljk4NjYtMjYuNDE1IDcuMzAzMS0zLjg0MzcgMS41Mjk2LTUuNDI0MyA1Ljg4MzItMy4zODAxIDkuMzIyNmwwLjAwNjUxNzYgMC4wMTEyMzZjMS43NDAyIDIuOTI3OCA1LjUyMjUgNC4xNDU5IDguNzk0MyAyLjg0MzIgNC44MjY3LTEuOTIxOSAxMi41NDUtNC41MzM5IDIyLjMwMS02LjI2OTJsLTEuMzA0NC0xMy4yMDkiIGZpbGw9IiM1NUJCQkEiLz4KPHBhdGggZD0ibTk0LjMwNyA0NS0xLjMwNjggMTMuMDg2YzcuNjAyIDEuMzMwNiAxNS4wNDkgMy40NjQ2IDIyLjI2MyA2LjM4MDkgMy4zODU1IDEuMzY4OCA3LjMyMjcgMC4wMTQ0MDQgOC45ODQtMy4wNjk4IDEuODA1NS0zLjM1MjQgMC4yNDc4MS03LjQ1ODQtMy40MzE0LTguOTQ2OC04LjU3MTMtMy40NjcyLTE3LjQ0Mi01Ljk2MDQtMjYuNTA5LTcuNDUwNSIgZmlsbD0iIzU1QkJCQSIvPgo8cGF0aCBkPSJtNTQuNzg3IDcxYy0yLjQ5NzcgMC43MTE3Ny00LjcwOTYgMS41MDE2LTYuNTgxMiAyLjI1ODMtMy43MTE0IDEuNDk5OS01LjMxNjYgNi4zMTk3LTMuMzc4OSAxMC4xMjRsOC41NjRlLTQgMC4wMDE4OTE4YzEuNTM5OCAzLjAyMzMgNC44MzY1IDQuMzc4MiA3Ljc4NTEgMy4xODM4IDAuOTk4MTQtMC40MDQ2IDIuMTMyLTAuODI2NDYgMy4zODcxLTEuMjM2NWwtMS4yMTI5LTE0LjMzMiIgZmlsbD0iIzU1QkJCQSIvPgo8cGF0aCBkPSJtOTIuMjE0IDcxLTEuMjEzOSAxNC4yODdjMS4xMDA5IDAuMzcxMjUgMi4yMTE2IDAuNzg4NCAzLjMzIDEuMjU1OSAzLjA2MDUgMS4yNzkgNi41MDQtMC4yMDcxNiA3Ljk3ODYtMy40MjYgMS43MDctMy43MjUyIDAuMTM0LTguMjg4Mi0zLjQwODktOS43NjU4LTIuMTk2Ni0wLjkxNTk5LTQuNDI3Ny0xLjY5OTctNi42ODU4LTIuMzUwOCIgZmlsbD0iIzU1QkJCQSIvPgo8cGF0aCBkPSJtODggMTE2YzAgNy43MzItNi4yNjgzIDE0LTE0IDE0LTcuNzMyIDAtMTQtNi4yNjgtMTQtMTRzNi4yNjgtMTQgMTQtMTRjNy43MzE3IDAgMTQgNi4yNjggMTQgMTQiIGZpbGw9IiNEM0NFQ0MiIHN0cm9rZT0iIzVDNEQzMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjwvZz4KPC9nPgo8L2c+Cjwvc3ZnPgo="
+             width="auto" height="150px" alt="offline"/>
+    </div>
+    <div class="ys-ofln-ttl">You're Offline</div>
+
+    <div class="ys-ofln-txt">No Internet connection found. Check your connection or try again.</div>
+
+    <button>Try Again</button>
+</div>
+
+<script>
+    const button = document.querySelector('button')
+    button.addEventListener('click', e => {
+        button.textContent = 'Loading...'
+        setTimeout(() => {
+            window.location.reload()
+        }, 500)
+    })
+</script>
+</body>
+</html>

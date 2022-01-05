@@ -1,0 +1,287 @@
+// Core Link
+.coreLink > a:hover {
+  color: inherit !important;
+}
+
+// page transition
+.pageTransition {
+  &-enter {
+    @apply opacity-0;
+    transform: translate3d(0px, -20px, 0);
+  
+    &-active {
+      @apply opacity-100;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 300ms, transform 300ms;
+    }
+  }
+
+  &-exit {
+    @apply opacity-100;
+  
+    &-active {
+      @apply opacity-0;
+      transition: opacity 300ms;
+    }
+  }
+}
+
+// more content
+.moreContent {
+  @apply relative;
+
+  & .moreContent-text {
+    @apply overflow-hidden h-28;
+  }
+
+  &::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-16 w-full;
+    background: linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.93) 62.6%,#fff);
+  }
+}
+
+// banners section
+.strictWidthSlidesSectionSlider {
+  .slick-slide {
+    max-width: 100vw;
+    @apply pl-2 pr-2;
+
+    @include desktop {
+      width: 620px;
+      height: 350px;
+      @apply ml-2 pr-0;
+    }
+
+    & img {
+      @include tablet {
+        width: 620px;
+        height: 350px;
+        object-fit: cover;
+      }
+      
+    }
+  }
+}
+
+.fullWidthSlidesSectionSlider {
+  .slick-slide {
+    max-width: 100vw;
+    @apply pl-2 pr-2;
+
+    @include desktop {
+      @apply ml-2 pr-0;
+    }
+
+    @include lg {
+      max-width: theme('screens.lg');
+    }
+
+    @include xl {
+      max-width: theme('screens.xl');
+    }
+  }
+
+  .slick-cloned {
+    display: none !important;
+  }
+}
+
+// Product page slider
+.productSlider {
+  .slick-slide {
+    @apply py-0 px-2;
+  }
+
+  & .slick-dots li {
+    @apply transition-all;
+
+    &.slick-active {
+      & button {
+        &::before {
+          @apply text-gray1000;
+          opacity: 1;
+        }
+      }
+    }
+
+    & > button {
+      &::before {
+        @apply text-gray400 text-[8px];
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Full width modal
+.fullWidthModalOverrides {
+  & .modal-header {
+    @apply bg-white border-b border-gray400 rounded-t-lg;
+    @include mobile {
+      border-radius: 0 !important;
+    }
+  }
+
+  @include mobile {
+    @apply w-full absolute top-0;
+    width: 100% !important;
+    margin: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    margin-top: 30px !important;
+
+    & .content {
+      height: calc(100vh - 160px);
+      @apply overflow-y-auto;
+    }
+  }
+
+  @include desktop {
+    & .content {
+      height: 500px;
+      @apply pb-16 overflow-y-auto;
+    }
+  }
+
+  &.noFooter {
+    @include mobile {
+      & .content {
+        height: calc(100vh - 86px);
+      }
+    }
+  }
+}
+
+
+// Share Product modal overrides
+.shareProductModalOverrides {
+  @include desktop {
+    width: 400px !important;
+  }
+
+  @include mobile {
+    @apply w-full absolute top-0 overflow-auto;
+    width: 100% !important;
+    margin: 0 !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+
+    @include landscapeMode {
+      .shareProductModalImage {
+        @apply w-48 min-h-48;
+      }
+    }
+  }
+}
+
+// Alert modal overrides
+.alertModalOverrides {
+  @include mobile {
+    @apply w-full absolute m-0 bottom-0 py-1;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  @include desktop {
+    @apply p-2;
+    width: 500px !important;
+  }
+}
+
+
+// Login Prompt modal overrides
+.loginPromptModalOverrides {
+  @include mobile {
+    @apply w-full absolute m-0 bottom-0 py-1;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  @include desktop {
+    @apply p-2;
+    width: 500px !important;
+  }
+}
+
+// Payment checkout modal overrides
+.paymentCheckoutModalOverrides {
+  @include mobile {
+    @apply w-full absolute m-0 bottom-0 py-1;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  @include desktop {
+    width: 500px !important;
+  }
+}
+
+// Scroll to top
+@keyframes scroll_to_top_animation {
+  0% {
+    @apply opacity-100;
+  }
+
+  50% {
+    @apply opacity-100;
+  }
+
+  to {
+      transform: translate3d(0,-10px,0);
+      @apply opacity-0;
+  }
+}
+
+.scrollToTop {
+  transform: translateZ(0);
+
+  &:hover {
+    & svg {
+      transform: translate3d(0,-1px,0);
+      animation: scroll_to_top_animation 1.2s ease-out infinite;
+    }
+  }
+
+  & svg {
+    transition: all .15s,transform .15s;
+  }
+}
+
+// Header
+.searchInputPlaceholder {
+  &::placeholder {
+    @apply text-base lg:text-lg;
+  }
+}
+
+// Products section slider
+.productSectionSlider {
+  .slick-slide {
+    @apply w-60 mx-2 pb-1;
+  }
+}
+
+// Blogs section slider
+.blogSectionSlider {
+  .slick-slide {
+    @apply w-60 mx-2 pb-1;
+  }
+}
+
+// add address input overrides
+.userInputGroupAddAddress .user-input {
+  @apply py-2;
+
+  &::placeholder {
+    @apply text-sm;
+  }
+}
+
+// account layout
+.account-layout-desktop-width {
+  width: calc(100% - 350px);
+}

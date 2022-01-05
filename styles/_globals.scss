@@ -1,0 +1,142 @@
+// globals
+a {
+  @apply text-primaryText transition-all;
+
+  &:hover {
+    @apply text-primaryTextBold;
+  }
+}
+
+body {
+  @apply text-primaryText font-primary bg-white;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+}
+
+div:focus {
+  outline: none !important;
+}
+
+ul {
+  @apply list-disc;
+}
+
+// Slick carousel globals
+.slick-track {
+  margin-left: inherit !important;
+}
+
+.slick-prev,
+.slick-next {
+  @apply rounded-full shadow transition-all;
+  z-index: 2;
+  top: 40% !important;
+  padding: 10px !important;
+  height: theme('height.10') !important;
+  width: theme('width.10') !important;
+  background: theme('backgroundColor.white') !important;
+
+  &:hover {
+    @apply shadow-md;
+  }
+
+  &::before {
+    @apply opacity-100;
+  }
+
+  &:focus, &:hover, &:active {
+    @apply bg-white;
+  }
+}
+
+.slick-prev {
+  left: -12px !important;
+
+  @media (min-width: 1280px) and (max-width: 1320px) {
+    left: 0px !important;
+  }
+
+  &::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJoLTUgdy01IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGZpbGw9ImN1cnJlbnRDb2xvciI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNy43MDcgMTQuNzA3YTEgMSAwIDAxLTEuNDE0IDBsLTQtNGExIDEgMCAwMTAtMS40MTRsNC00YTEgMSAwIDAxMS40MTQgMS40MTRMNS40MTQgOUgxN2ExIDEgMCAxMTAgMkg1LjQxNGwyLjI5MyAyLjI5M2ExIDEgMCAwMTAgMS40MTR6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==') !important;
+  }
+}
+
+.slick-next {
+  right: -12px !important;
+
+  @media (min-width: 1280px) and (max-width: 1320px) {
+    right: 0px !important;
+  }
+
+  &::before {
+    content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJoLTUgdy01IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGZpbGw9ImN1cnJlbnRDb2xvciI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTAuMjkzIDMuMjkzYTEgMSAwIDAxMS40MTQgMGw2IDZhMSAxIDAgMDEwIDEuNDE0bC02IDZhMSAxIDAgMDEtMS40MTQtMS40MTRMMTQuNTg2IDExSDNhMSAxIDAgMTEwLTJoMTEuNTg2bC00LjI5My00LjI5M2ExIDEgMCAwMTAtMS40MTR6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIC8+Cjwvc3ZnPg==') !important;
+  }
+}
+
+// Accordion globals
+.Collapsible__trigger {
+  & .collapsible-chevron-icon {
+    @apply transition-transform;
+  }
+
+  &.is-open {
+    & .collapsible-chevron-icon {
+      @apply transform rotate-180;
+    }
+  } 
+}
+
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.fade-out {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-hover-bg {
+  &:hover {
+    background: inherit !important;
+  }
+}
+
+.no-focus-boxShadow {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.mobile-view {
+  display: inherit;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-view {
+  display: none;
+
+  @include desktop {
+    display: inherit;
+  }
+}
+
+.underline-dashed {
+  text-decoration: underline dashed;
+}
+
+.pr-8-important {
+  padding-right: theme('spacing.8') !important;
+}

@@ -1,0 +1,61 @@
+name: Workflow
+
+on: [push]
+
+jobs:
+  Lint:
+    name: Lint
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Determine npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - name: Restore npm cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Lint JS, SCSS
+        run: |
+          npm ci
+          npm run lint:fix
+
+  Build:
+    name: Build
+    env:
+      STORE_WEB_ENV: production
+      CYPRESS_INSTALL_BINARY: 0
+      CI: true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Determine npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - name: Restore npm cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          STORE_WEB_ENV=production npm run build 

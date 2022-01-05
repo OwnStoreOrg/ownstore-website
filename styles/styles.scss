@@ -1,0 +1,81 @@
+// include taiwind directories
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// imports
+@import 'mixins';
+@import 'fonts';
+@import 'globals';
+@import 'input';
+@import 'nprogress';
+@import 'loader';
+@import 'orientation-lock';
+@import 'html';
+@import 'components';
+
+// Custom utilities
+.hide-scrollbar {
+  @include hide-scrollbar;
+}
+
+.blur {
+  filter: blur(1px);
+}
+
+.no-blur {
+  filter: blur(0px);
+}
+
+// User forms
+.user-input {
+  @apply py-2;
+
+  &::placeholder {
+    @apply text-base;
+  }
+
+  &-error {
+    border-color: red !important;
+  }
+
+  &-group {
+    @apply mb-5;
+  }
+
+  &-label {
+    @apply text-sm text-primaryTextBold font-medium mb-2 font-normal font-primary-medium;
+  }
+}
+
+@keyframes shakeX {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+}
+
+.animation-shakeX {
+  display: inline-block;
+  animation-name: shakeX;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}

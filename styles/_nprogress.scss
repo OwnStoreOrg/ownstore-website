@@ -1,0 +1,21 @@
+/* Make clicks pass-through */
+#nprogress {
+  @apply pointer-events-none;
+}
+
+#nprogress .bar {
+  @apply z-20 fixed top-0 left-0 w-full h-[2px] bg-primary;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  @apply block absolute right-0 w-24 h-full shadow-lg opacity-100 transform rotate-3 translate-y-0 -translate-x-1;
+}
+
+.nprogress-custom-parent {
+  @apply hidden relative;
+}
+
+.nprogress-custom-parent #nprogress .bar {
+  @apply absolute;
+}

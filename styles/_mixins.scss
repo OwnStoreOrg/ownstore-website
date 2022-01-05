@@ -1,0 +1,53 @@
+@mixin hide-scrollbar {
+  /*
+    Firefox doesn't have support to hide scrollbar.
+    Hence, setting scrollbar's width to none.
+  */
+  & {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    /*
+    Hide scrollbar for Chrome, Safari and Opera.
+  */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@mixin desktop {
+  @media (min-width: theme('screens.lg')) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: theme('screens.lg')) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: theme('screens.md')) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: theme('screens.lg')) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: theme('screens.xl')) {
+    @content;
+  }
+}
+
+@mixin landscapeMode {
+  @media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 1023px) {
+    @content;
+  }
+}

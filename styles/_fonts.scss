@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'BentonSans';
+  src: url('/fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.woff')
+      format('woff'),
+    url('/fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.tff')
+      format('ttf'),
+    url('/fonts/BentonSans/BentonSans-Regular/BentonSans-Regular.eot')
+      format('eot');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: 'BentonSans-Bold';
+  src: url('/fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.woff')
+      format('woff'),
+    url('/fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.ttf')
+      format('ttf'),
+    url('/fonts/BentonSans/BentonSans-Bold/BentonSans-Bold.eot')
+      format('eot');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: 'BentonSans-Medium';
+  src: url('/fonts/BentonSans/BentonSans-Medium/BentonSans-Medium.woff')
+      format('woff'),
+    url('/fonts/BentonSans/BentonSans-Medium/BentonSans-Medium.ttf')
+      format('ttf'),
+    url('/fonts/BentonSans/BentonSans-Medium/BentonSans-Medium.eot')
+      format('eot');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: 'BentonSans-RegularItalic';
+  src: url('/static/fonts/BentonSans/BentonSans-Italic/BentonSans-RegularItalic.woff2')
+      format('woff2'),
+    url('/static/fonts/BentonSans/BentonSans-Italic/BentonSans-RegularItalic.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: 'BentonSans-BoldItalic';
+  src: url('/fonts/BentonSans/BentonSans-Italic/BentonSans-BoldItalic.woff2')
+      format('woff2'),
+    url('/fonts/BentonSans/BentonSans-Italic/BentonSans-BoldItalic.woff')
+      format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+};
+
+@font-face {
+  font-family: 'BentonSans-MediumItalic';
+  src: url('/fonts/BentonSans/BentonSans-Italic/BentonSans-MediumItalic.woff2')
+      format('woff2'),
+    url('/fonts/BentonSans/BentonSans-Italic/BentonSans-MediumItalic.woff')
+      format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+};

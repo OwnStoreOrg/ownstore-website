@@ -1,0 +1,109 @@
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=number],
+textarea {
+  @apply text-base w-full rounded-md border border-gallery bg-white outline-none text-mineShaft pt-2 pr-0 pl-3;
+  transition: border 0.2s ease 0s, color 0.2s ease 0s;
+
+  &:focus {
+    @apply border-gray700;
+  }
+
+  &::placeholder {
+    @apply text-sm lg:text-base;
+  }
+}
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+
+  // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Remove focus outline, will add on alternate element
+  outline: none;
+}
+
+// custom select
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  @apply border border-gallery rounded py-[6px] px-2 text-base cursor-pointer;
+
+  // Custom arrow
+  &:not(.select--multiple)::after {
+    content: "";
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+
+    @apply justify-self-end bg-gray600 w-3 h-2;
+  }
+}
+
+select[multiple] {
+  @apply pr-0;
+
+  /*
+   * Safari will not reveal an option
+   * unless the select height has room to 
+   * show all of it
+   * Firefox and Chrome allow showing 
+   * a partial option
+   */
+
+  option {
+    white-space: normal;
+    cursor: pointer;
+
+    // Only affects Chrome
+    // outline-color: blue;
+  }
+
+  /* 
+   * Experimental - styling of selected options
+   * in the multiselect
+   * Not supported crossbrowser
+   */
+    // &:not(:disabled) option {
+    //   border-radius: 12px;
+    //   transition: 120ms all ease-in;
+
+    //   &:checked {
+    //     background: linear-gradient(hsl(242, 61%, 76%), hsl(242, 61%, 71%));
+    //     padding-left: 0.5em;
+    //     color: black !important;
+    //   }
+    // }
+}
+
+.select--disabled {
+  @apply cursor-not-allowed bg-gray200;
+}
+
+// Interim solution until :focus-within has better support
+select:focus + .focus {
+  @apply absolute top-[-1px] left-[-1px] right-[-1px] bottom-[-1px] border border-gray700 rounded;
+}

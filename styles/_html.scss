@@ -1,0 +1,24 @@
+// Styles for HTML stored in DB (eg. Terms & Conditions, Product feature section)
+
+.html-body {
+  & p {
+    @apply py-2;
+  }
+
+  & ul {
+    @apply list-disc;
+    @apply ml-5;
+  }
+
+  & li {
+    @apply py-2;
+  }
+
+  & b {
+    @apply font-medium font-primary-medium text-primaryText; 
+  }
+
+  & a {
+    @apply underline hover:text-primaryTextBold;
+  }
+}
