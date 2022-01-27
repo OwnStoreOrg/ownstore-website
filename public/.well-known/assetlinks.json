@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.own_store_demo.twa",
+    "sha256_cert_fingerprints": [
+      "3C:EC:71:74:BA:71:56:A3:F5:50:B4:07:06:01:F5:7E:9C:F2:FA:93:5C:D5:02:BE:61:E2:8A:D0:8D:1F:FA:7A"
+    ]
+  }
+}]
