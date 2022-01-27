@@ -5,3 +5,5 @@ The suite contains the following projects:
 - [API](https://github.com/OwnStoreOrg/ownstore-api)
 - [CMS](https://github.com/OwnStoreOrg/ownstore-cms)
 - [Doc](https://github.com/OwnStoreOrg/ownstore-doc)
+- Apps
+  - [TWA](https://github.com/OwnStoreOrg/ownstore-app-twa)
